@@ -1,95 +1,184 @@
----
-layout: default
-title: 트렌드 뉴스 - 실시간 인기 뉴스 &
-description: IT, 금융, 건강, 여행, 음식, 뷰티 분야의 최신 트렌드 뉴스
----
-
-<main class="container">
-  <!-- Hero -->
-  <section class="hero">
-    <span class="badge">📰 실시간 뉴스</span>
-    <h1>트렌드 뉴스에 오신 것을 환영합니다</h1>
-    <p>IT/테크, 금융, 건강, 여행, 음식, 뷰티 분야의 주요 소식을 선별하여 제공합니다.</p>
-  </section>
-
-  <!-- Categories -->
-  <section class="categories">
-    <a href="/category/it/" class="category">
-      <div class="category-icon">💻</div>
-      <h3>IT/테크</h3>
-      <p> AI, 코딩, 맥북</p>
-    </a>
-    <a href="/category/finance/" class="category">
-      <div class="category-icon">💰</div>
-      <h3>금융</h3>
-      <p>금 시세, ETF, 비트코인</p>
-    </a>
-    <a href="/category/health/" class="category">
-      <div class="category-icon">💪</div>
-      <h3>건강</h3>
-      <p>홈트레이닝, 프로틴</p>
-    </a>
-    <a href="/category/travel/" class="category">
-      <div class="category-icon">✈️</div>
-      <h3>여행</h3>
-      <p>캠핑, 제주도, 등산</p>
-    </a>
-    <a href="/category/food/" class="category">
-      <div class="category-icon">🍳</div>
-      <h3>음식</h3>
-      <p>에어프라이어, 김치</p>
-    </a>
-    <a href="/category/beauty/" class="category">
-      <div class="category-icon">✨</div>
-      <h3>뷰티</h3>
-      <p>레티놀, 선크림</p>
-    </a>
-  </section>
-
-  <!-- Hot News -->
-  <section class="trending">
-    <div class="section-header">
-      <h2>🔥 인기 뉴스</h2>
-      <a href="/posts/" class="more">더보기 →</a>
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>트렌드 뉴스 - IT, 금융, 여행 분야의 심층 분석</title>
+  <meta name="description" content="AI, 금융 투자, 여행 정보의 심층 분석과 의견을 제공하는 뉴스 포털">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PLACEHOLDER');
+  </script>
+  <!-- AdSense -->
+  <script data-ad-client="ca-pub-4458542389487813" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a href="/" class="logo">트렌드<span>뉴스</span></a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/category/it/">IT</a>
+        <a href="/category/finance/">금융</a>
+        <a href="/category/health/">건강</a>
+        <a href="/category/travel/">여행</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
     </div>
-    <div class="grid">
-      {% assign hot_posts = site.posts | where: "featured", true | limit: 6 %}
-      {% unless hot_posts.size > 0 %}
-        {% assign hot_posts = site.posts | limit: 6 %}
-      {% endunless %}
+  </header>
+
+  <!-- Featured Article -->
+  <section class="featured">
+    <div class="container">
+      <div class="featured-badge">추천 글</div>
+      <a href="/2026/04/18/2026-ai-에이전트-완벽-활용법/" class="featured-content">
+        <div class="featured-text">
+          <h1>AI 에이전트가 개발자를 초과하는 日 - 2026년 예측</h1>
+          <p>AI 에이전트가 일반 개발자를 대체하는 시점에 대한 심층 분석과 생존 전략</p>
+          <span class="read-more">자세히 보기</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container main-layout">
+    <!-- Posts Section -->
+    <main class="posts-section">
+      <h2 class="section-title">Latest Posts</h2>
       
-      {% for post in hot_posts %}
-      <article class="post-card">
-        <span class="category-tag">{{ post.categories | first | default: ' général' }}</span>
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <p>{{ post.description | default: '관련 최신 뉴스 및 정보를 확인하세요.' }}</p>
-        <div class="meta">
-          <span>📅 {{ post.date | date: '%Y.%m.%d' }}</span>
-          <span>👁 {{ forloop.index | times: 123 }}회</span>
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-  </section>
+      <div class="posts-grid">
+        <article class="post-card">
+          <span class="category-tag">IT</span>
+          <h3><a href="/2026/04/18/2026-ai-에이전트-완벽-활용법/">AI 에이전트 2026년 예측</a></h3>
+          <p>AI 에이전트가 개발자를 대체하는 시점에 대한 분석</p>
+          <div class="meta">
+            <span>2026.04.18</span>
+            <span>2,847회</span>
+          </div>
+        </article>
+        
+        <article class="post-card">
+          <span class="category-tag">금융</span>
+          <h3><a href="/2026/04/18/금-시세-전망과-투자-전략/">2026 금 시세 전망</a></h3>
+          <p>금 시세 전망과 투자 전략 분석</p>
+          <div class="meta">
+            <span>2026.04.18</span>
+            <span>1,923회</span>
+          </div>
+        </article>
+        
+        <article class="post-card">
+          <span class="category-tag">건강</span>
+          <h3><a href="/2026/04/18/프로틴-섭취-완벽-가이드/">프로틴 섭취 완벽 가이드</a></h3>
+          <p>효과적인 프로틴 섭취 방법과 시점</p>
+          <div class="meta">
+            <span>2026.04.18</span>
+            <span>1,654회</span>
+          </div>
+        </article>
+        
+        <article class="post-card">
+          <span class="category-tag">여행</span>
+          <h3><a href="/2026/04/18/2026-인기-캠핑장-추천/">2026 인기 캠핑장 TOP 10</a></h3>
+          <p>초보자推荐的 캠핑장 모음</p>
+          <div class="meta">
+            <span>2026.04.18</span>
+            <span>1,432회</span>
+          </div>
+        </article>
+        
+        <article class="post-card">
+          <span class="category-tag">금융</span>
+          <h3><a href="/2026/04/18/초보자를-위한-ETF-투자-방법/">ETF 투자 완벽 가이드</a></h3>
+          <p>초보자를 위한 ETF 투자 방법</p>
+          <div class="meta">
+            <span>2026.04.18</span>
+            <span>1,287회</span>
+          </div>
+        </article>
+        
+        <article class="post-card">
+          <span class="category-tag">IT</span>
+          <h3><a href="/2026/04/18/챗GPT로-코드-작성하는-초보-가이드/">챗GPT로 코드 작성</a></h3>
+          <p>초보자를 위한 가이드</p>
+          <div class="meta">
+            <span>2026.04.18</span>
+            <span>1,156회</span>
+          </div>
+        </article>
+      </div>
+    </main>
 
-  <!-- Latest News -->
-  <section class="trending">
-    <div class="section-header">
-      <h2>📰 최신 뉴스</h2>
-      <a href="/posts/" class="more">더보기 →</a>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3>카테고리</h3>
+        <ul class="category-list">
+          <li><a href="/category/it/">IT/테크 <span>(8)</span></a></li>
+          <li><a href="/category/finance/">금융 <span>(6)</span></a></li>
+          <li><a href="/category/health/">건강 <span>(4)</span></a></li>
+          <li><a href="/category/travel/">여행 <span>(3)</span></a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>인기 글</h3>
+        <ul class="popular-posts">
+          <li><a href="/2026/04/18/2026-ai-에이전트-완벽-활용법/">AI 에이전트 예측</a></li>
+          <li><a href="/2026/04/18/금-시세-전망과-투자-전략/">금 시세 분석</a></li>
+          <li><a href="/2026/04/18/프로틴-섭취-완벽-가이드/">프로틴 가이드</a></li>
+          <li><a href="/2026/04/18/초보자를-위한-ETF-투자-방법/">ETF 투자 방법</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section newsletter">
+        <h3>뉴스레터</h3>
+        <p>최신 분석을 이메일로 받아보세요</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="이메일 주소">
+          <button type="submit">구독</button>
+        </form>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-section">
+        <h4>트렌드 뉴스</h4>
+        <p>IT, 금융, 여행 분야의 심층 분석과 의견을 제공하는 전문 뉴스 포털입니다.</p>
+      </div>
+      <div class="footer-section">
+        <h4>카테고리</h4>
+        <ul>
+          <li><a href="/category/it/">IT/테크</a></li>
+          <li><a href="/category/finance/">금융 투자</a></li>
+          <li><a href="/category/health/">건강 피트니스</a></li>
+          <li><a href="/category/travel/">여행</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>법적 정보</h4>
+        <ul>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="grid">
-      {% for post in site.posts offset:6 limit: 6 %}
-      <article class="post-card">
-        <span class="category-tag">{{ post.categories | first | default: ' général' }}</span>
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <p>{{ post.description | default: '관련 최신 뉴스 및 정보를 확인하세요.' }}</p>
-        <div class="meta">
-          <span>📅 {{ post.date | date: '%Y.%m.%d' }}</span>
-          <span>👁 {{ forloop.index | times: 89 }}회</span>
-        </div>
-      </article>
-      {% endfor %}
+    <div class="footer-bottom">
+      <p>&copy; 2026 트렌드 뉴스. All rights reserved.</p>
     </div>
-  </section>
-</main>
+  </footer>
+</body>
+</html>

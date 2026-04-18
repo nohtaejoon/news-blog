@@ -1,22 +1,79 @@
----
-layout: default
-title: 문의하기
-permalink: /contact/
----
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - 트렌드 뉴스</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="/" class="logo">트렌드<span>뉴스</span></a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/category/it/">IT</a>
+        <a href="/category/finance/">금융</a>
+        <a href="/category/health/">건강</a>
+        <a href="/category/travel/">여행</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-## 문의하기
+  <main class="container page-content">
+    <section class="contact-hero">
+      <h1>Contact</h1>
+      <p class="subtitle">문의 또는 제안 사항이 있으시면 아래 방법으로 연락주세요.</p>
+    </section>
 
-아래 정보를 통해 사이트 운영자에게 연락하실 수 있습니다. 이 페이지는 예시용으로 작성되었으며 실제 응답은 백엔드가 제공될 때까지 제한적일 수 있습니다.
+    <section class="contact-content">
+      <div class="contact-block">
+        <h2>이메일</h2>
+        <p>가장 빠른 답변은 이메일로 가능합니다.</p>
+        <p class="contact-email"><a href="mailto:nohtaejoon@gmail.com">nohtaejoon@gmail.com</a></p>
+      </div>
 
-<form action="#" method="post" aria-label="contact form">
-  <label for="name">이름</label><br>
-  <input type="text" id="name" name="name" placeholder="홍길동" required style="width:100%;max-width:600px;padding:0.5rem;border:1px solid #ccc;border-radius:4px"><br><br>
+      <div class="contact-block">
+        <h2>운영 시간</h2>
+        <p>평일 09:00 - 18:00 (KST)</p>
+        <p>주말, 공휴일에는 안내가 제한될 수 있습니다.</p>
+      </div>
 
-  <label for="email">이메일</label><br>
-  <input type="email" id="email" name="email" placeholder="name@example.com" required style="width:100%;max-width:600px;padding:0.5rem;border:1px solid #ccc;border-radius:4px"><br><br>
+      <div class="contact-block">
+        <h2>자주 하는 질문</h2>
+        <dl>
+          <dt>광고 협력을 원합니다</dt>
+          <dd>현재 Google AdSense를 통해 광고가 게재되고 있습니다. 개별 광고 협의는 presently 받지하고 있습니다.</dd>
+          
+          <dt>글 게재를 요청하고 싶습니다</dt>
+          <dd>각종Guest Post 요청은 받지 않고 있습니다.</dd>
+          
+          <dt>오타를 발견했습니다</dt>
+          <dd>발견하신 오류는 빠르게 수정하겠습니다. 해당 페이지와 내용을 알려주시면 감사합니다.</dd>
+        </dl>
+      </div>
+    </section>
+  </main>
 
-  <label for="message">메시지</label><br>
-  <textarea id="message" name="message" rows="6" placeholder="문의 내용을 입력하세요" required style="width:100%;max-width:600px;padding:0.5rem;border:1px solid #ccc;border-radius:4px"></textarea><br><br>
-
-  <button type="submit" style="padding:0.6rem 1rem;border-radius:4px;border:1px solid #007acc;background:#007acc;color:white">전송</button>
-</form>
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-section">
+        <h4>트렌드 뉴스</h4>
+        <p>IT, 금융, 여행 분야의 심층 분석과 의견을 제공하는 전문 뉴스 포털입니다.</p>
+      </div>
+      <div class="footer-section">
+        <h4>법적 정보</h4>
+        <ul>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 트렌드 뉴스. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
