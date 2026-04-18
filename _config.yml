@@ -1,0 +1,12 @@
+title: Automated News Blog
+description: A simple Jekyll blog setup using the minima-inspired theme for GitHub Pages.
+url: https://nohtaejoon.github.io
+baseurl: /news-blog
+theme: minima
+markdown: kramdown
+permalink: /:categories/:title/
+google_analytics: 
+defaults:
+  - scope: "/"
+    values:
+      layout: default

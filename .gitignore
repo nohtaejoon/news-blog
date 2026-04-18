@@ -1,0 +1,11 @@
+.gitignore
+node_modules
+.npm
+.bun
+.cache
+.sisyphus
+.local
+*.log
+*.db-*
+.DS_Store
+opencode-nomin
