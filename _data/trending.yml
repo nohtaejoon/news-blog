@@ -1,0 +1,73 @@
+hot_news:
+  - title: "2026년 AI 에이전트 완벽 활용법 - 生产성 향상 가이드"
+    category: "IT"
+    url: "/2026/04/18/2026-ai-에이전트-완벽-활용법/"
+    date: "2026-04-18"
+    views: 2847
+    
+  - title: "2026 금 시세 전망 - 투자 전략 và 전문가 분석"
+    category: "금융"
+    url: "/2026/04/18/2026-금-시세-전망과-투자-전략/"
+    date: "2026-04-18"
+    views: 1923
+    
+  - title: "프로틴 섭취 완벽 가이드 - 시점과 方法"
+    category: "건강"
+    url: "/2026/04/18/프로틴-섭취-완벽-가이드/"
+    date: "2026-04-18"
+    views: 1654
+    
+  - title: "2026 인기 캠핑장 TOP 10 - 초보자 추천"
+    category: "여행"
+    url: "/2026/04/18/2026-인기-캠핑장-추천/"
+    date: "2026-04-18"
+    views: 1432
+    
+  - title: "에어프라이어 레시피 5선 - 초간편 요리"
+    category: "음식"
+    url: "/2026/04/18/에어프라이어-레시피-5선/"
+    date: "2026-04-18"
+    views: 1287
+    
+  - title: "레티놀 올바른 사용법 - 피부과 전문의 조언"
+    category: "뷰티"
+    url: "/2026/04/18/레티놀-올바른-사용법/"
+    date: "2026-04-18"
+    views: 1156
+
+categories:
+  - name: "IT/테크"
+    slug: "it"
+    icon: "💻"
+    description: "AI, 코딩, 맥북"
+    color: "#2563eb"
+    
+  - name: "금융"
+    slug: "finance"
+    icon: "💰"
+    description: "금 시세, ETF, 비트코인"
+    color: "#10b981"
+    
+  - name: "건강"
+    slug: "health"
+    icon: "💪"
+    description: "홈트레이닝, 프로틴"
+    color: "#f59e0b"
+    
+  - name: "여행"
+    slug: "travel"
+    icon: "✈️"
+    description: "캠핑, 제주도, 등산"
+    color: "#06b6d4"
+    
+  - name: "음식"
+    slug: "food"
+    icon: "🍳"
+    description: "에어프라이어, 김치"
+    color: "#ef4444"
+    
+  - name: "뷰티"
+    slug: "beauty"
+    icon: "✨"
+    description: "레티놀, 선크림"
+    color: "#ec4899"

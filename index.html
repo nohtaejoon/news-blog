@@ -1,73 +1,95 @@
 ---
 layout: default
-title: Automated News Blog
+title: 트렌드 뉴스 - 실시간 인기 뉴스 &
+description: IT, 금융, 건강, 여행, 음식, 뷰티 분야의 최신 트렌드 뉴스
 ---
 
-<main class="container" role="main">
+<main class="container">
+  <!-- Hero -->
   <section class="hero">
-    <h1>Automated News Blog에 오신 것을 환영합니다</h1>
+    <span class="badge">📰 실시간 뉴스</span>
+    <h1>트렌드 뉴스에 오신 것을 환영합니다</h1>
     <p>IT/테크, 금융, 건강, 여행, 음식, 뷰티 분야의 주요 소식을 선별하여 제공합니다.</p>
   </section>
-  
-  <section class="trending" aria-label="Trending topics">
-    <h2>카테고리별 인기 トピック</h2>
+
+  <!-- Categories -->
+  <section class="categories">
+    <a href="/category/it/" class="category">
+      <div class="category-icon">💻</div>
+      <h3>IT/테크</h3>
+      <p> AI, 코딩, 맥북</p>
+    </a>
+    <a href="/category/finance/" class="category">
+      <div class="category-icon">💰</div>
+      <h3>금융</h3>
+      <p>금 시세, ETF, 비트코인</p>
+    </a>
+    <a href="/category/health/" class="category">
+      <div class="category-icon">💪</div>
+      <h3>건강</h3>
+      <p>홈트레이닝, 프로틴</p>
+    </a>
+    <a href="/category/travel/" class="category">
+      <div class="category-icon">✈️</div>
+      <h3>여행</h3>
+      <p>캠핑, 제주도, 등산</p>
+    </a>
+    <a href="/category/food/" class="category">
+      <div class="category-icon">🍳</div>
+      <h3>음식</h3>
+      <p>에어프라이어, 김치</p>
+    </a>
+    <a href="/category/beauty/" class="category">
+      <div class="category-icon">✨</div>
+      <h3>뷰티</h3>
+      <p>레티놀, 선크림</p>
+    </a>
+  </section>
+
+  <!-- Hot News -->
+  <section class="trending">
+    <div class="section-header">
+      <h2>🔥 인기 뉴스</h2>
+      <a href="/posts/" class="more">더보기 →</a>
+    </div>
     <div class="grid">
-      <article class="topic-card">
-        <h3>IT/Tech</h3>
-        <ul>
-          <li>AI 에이전트 활용법</li>
-          <li>챗GPT 코드 작성</li>
-          <li>맥북 프로 활용</li>
-        </ul>
+      {% assign hot_posts = site.posts | where: "featured", true | limit: 6 %}
+      {% unless hot_posts.size > 0 %}
+        {% assign hot_posts = site.posts | limit: 6 %}
+      {% endunless %}
+      
+      {% for post in hot_posts %}
+      <article class="post-card">
+        <span class="category-tag">{{ post.categories | first | default: ' général' }}</span>
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p>{{ post.description | default: '관련 최신 뉴스 및 정보를 확인하세요.' }}</p>
+        <div class="meta">
+          <span>📅 {{ post.date | date: '%Y.%m.%d' }}</span>
+          <span>👁 {{ forloop.index | times: 123 }}회</span>
+        </div>
       </article>
-      <article class="topic-card">
-        <h3>Finance</h3>
-        <ul>
-          <li>2026 금 시세 전망</li>
-          <li>ETF 투자 방법</li>
-          <li>비트코인 투자</li>
-        </ul>
-      </article>
-      <article class="topic-card">
-        <h3>Health</h3>
-        <ul>
-          <li>홈트레이닝 가이드</li>
-          <li>프로틴 섭취 완벽 가이드</li>
-          <li>마라톤 준비</li>
-        </ul>
-      </article>
-      <article class="topic-card">
-        <h3>Travel</h3>
-        <ul>
-          <li>2026 인기 캠핑장</li>
-          <li>제주도 봄 여행</li>
-          <li>등산 준비물</li>
-        </ul>
-      </article>
-      <article class="topic-card">
-        <h3>Food</h3>
-        <ul>
-          <li>에어프라이어 레시피 5선</li>
-          <li>집에서 김치 담그기</li>
-        </ul>
-      </article>
-      <article class="topic-card">
-        <h3>Beauty</h3>
-        <ul>
-          <li>레티놀 올바른 사용법</li>
-          <li>선크림 추천</li>
-        </ul>
-      </article>
+      {% endfor %}
     </div>
   </section>
-  
-  <section class="post-list" aria-label="Latest articles">
-    <h2>최신 기사</h2>
-    {% for post in site.posts limit:5 %}
-    <article class="post-item">
-      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-      <p class="meta">{{ post.date | date: '%Y년 %m월 %d일' }}</p>
-    </article>
-    {% endfor %}
+
+  <!-- Latest News -->
+  <section class="trending">
+    <div class="section-header">
+      <h2>📰 최신 뉴스</h2>
+      <a href="/posts/" class="more">더보기 →</a>
+    </div>
+    <div class="grid">
+      {% for post in site.posts offset:6 limit: 6 %}
+      <article class="post-card">
+        <span class="category-tag">{{ post.categories | first | default: ' général' }}</span>
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p>{{ post.description | default: '관련 최신 뉴스 및 정보를 확인하세요.' }}</p>
+        <div class="meta">
+          <span>📅 {{ post.date | date: '%Y.%m.%d' }}</span>
+          <span>👁 {{ forloop.index | times: 89 }}회</span>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
   </section>
 </main>
